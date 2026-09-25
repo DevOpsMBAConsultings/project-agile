@@ -231,8 +231,7 @@
                 <field name="value" />
                 <field name="risk" />
                 <field name="kano" />
-                <group expand="0" string="Group By...">
-                    <separator orientation="vertical" />
+                <group>
                     <filter
                         string="Project"
                         name="group_by_project"

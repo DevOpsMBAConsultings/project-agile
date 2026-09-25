@@ -149,28 +149,23 @@
                 <field name="user_story_id_test" />
                 <field name="description_test" />
                 <field name="stats_test" />
-                <group string="Filter By...">
-                    <filter
-                        name="draft"
-                        string="Draft"
-                        domain="[('stats_test','=','draft')]"
-                    />
-                    <separator orientation="vertical" />
-                    <separator orientation="vertical" />
-                    <filter
-                        name="cancelled"
-                        string="Cancelled"
-                        domain="[('stats_test','=','cancel')]"
-                    />
-                </group>
-                <newline />
-                <group expand="0" string="Group By...">
+                <filter
+                    name="draft"
+                    string="Draft"
+                    domain="[('stats_test','=','draft')]"
+                />
+                <filter
+                    name="cancelled"
+                    string="Cancelled"
+                    domain="[('stats_test','=','cancel')]"
+                />
+                <separator />
+                <group>
                     <filter
                         string="Project"
                         name="group_by_project"
                         context="{'group_by':'project_id'}"
                     />
-                    <separator orientation="vertical" />
                     <filter
                         string="User Story"
                         name="group_by_us_test"

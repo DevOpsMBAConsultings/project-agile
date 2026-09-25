@@ -166,52 +166,43 @@
                 <field name="date_stop" />
                 <field name="us_ids" />
                 <field name="task_ids" />
-                <group string="Filter By...">
-                    <filter
-                        name="draft"
-                        string="Draft"
-                        domain="[('state','=','draft')]"
-                    />
-                    <separator orientation="vertical" />
-                    <filter name="open" string="Open" domain="[('state','=','open')]" />
-                    <separator orientation="vertical" />
-                    <filter
-                        name="pending"
-                        string="Pending"
-                        domain="[('state','=','pending')]"
-                    />
-                    <separator orientation="vertical" />
-                    <filter
-                        name="cancelled"
-                        string="Cancelled"
-                        domain="[('state','=','cancel')]"
-                    />
-                    <separator orientation="vertical" />
-                    <filter name="done" string="Done" domain="[('state','=','done')]" />
-                </group>
-                <newline />
-                <group expand="0" string="Group By...">
+                <filter
+                    name="draft"
+                    string="Draft"
+                    domain="[('state','=','draft')]"
+                />
+                <filter name="open" string="Open" domain="[('state','=','open')]" />
+                <filter
+                    name="pending"
+                    string="Pending"
+                    domain="[('state','=','pending')]"
+                />
+                <filter
+                    name="cancelled"
+                    string="Cancelled"
+                    domain="[('state','=','cancel')]"
+                />
+                <filter name="done" string="Done" domain="[('state','=','done')]" />
+                <separator />
+                <group>
                     <filter
                         name="product_owner"
                         string="Product owner"
                         domain="[]"
                         context="{'group_by':'product_owner_id'}"
                     />
-                    <separator orientation="vertical" />
                     <filter
                         name="scrum_master"
                         string="Scrum Master"
                         domain="[]"
                         context="{'group_by':'scrum_master_id'}"
                     />
-                    <separator orientation="vertical" />
                     <filter
                         name="project"
                         string="Project"
                         domain="[]"
                         context="{'group_by':'project_id'}"
                     />
-                    <separator orientation="vertical" />
                     <filter
                         name="month"
                         string="Month"
