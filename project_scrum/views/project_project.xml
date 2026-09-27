@@ -126,6 +126,9 @@
         <field name="mode">primary</field>
         <field name="priority">99</field>
         <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </xpath>
             <xpath expr="//templates" position="before">
                 <field name="task_count" />
                 <field name="user_story_count" />
@@ -139,6 +142,9 @@
                 <div t-if="record.description.raw_value" class="text-muted text-truncate" t-att-title="record.description.value">
                     <span class="fa fa-align-left me-2" aria-label="Description" title="Description"></span><field name="description"/>
                 </div>
+            </xpath>
+            <xpath expr="//div[hasclass('o_project_kanban_boxes')]" position="attributes">
+                <attribute name="class">o_project_kanban_boxes d-flex align-items-baseline flex-wrap gap-1</attribute>
             </xpath>
             <xpath expr="//a[@name='action_view_tasks'][hasclass('o_project_kanban_box')]" position="replace">
                 <a
